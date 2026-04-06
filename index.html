@@ -1,1 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordinary Magic</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #000;
+        color: #fff;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0 32px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+      }
+      .brand {
+        font-size: 20px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      nav {
+        display: flex;
+        gap: 24px;
+        color: rgba(255,255,255,0.7);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        padding: 72px 0;
+        align-items: center;
+      }
+      .eyebrow {
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 1.02;
+        margin: 16px 0;
+      }
+      .lead {
+        color: rgba(255,255,255,0.72);
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 600px;
+      }
+      .hero-image,
+      .card-image {
+        background: #111;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+      .hero-image img,
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: grayscale(100%);
+      }
+      .hero-image {
+        aspect-ratio: 4 / 5;
+      }
+      section {
+        padding: 28px 0 56px;
+      }
+      h2 {
+        font-size: 32px;
+        margin: 8px 0 24px;
+      }
+      .section-text {
+        color: rgba(255,255,255,0.62);
+        max-width: 620px;
+        line-height: 1.7;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 28px;
+      }
+      .card {
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 24px;
+        overflow: hidden;
+        background: rgba(255,255,255,0.02);
+      }
+      .card-image {
+        aspect-ratio: 4 / 5;
+        border: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-radius: 0;
+      }
+      .card-body {
+        padding: 18px;
+      }
+      .meta {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.38);
+      }
+      .card h3 {
+        margin: 10px 0 10px;
+        font-size: 22px;
+      }
+      .card p {
+        margin: 0;
+        color: rgba(255,255,255,0.62);
+        line-height: 1.6;
+      }
+      .about,
+      .contact {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 24px;
+        padding-top: 40px;
+      }
+      .contact-box {
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 28px;
+        padding: 32px;
+        background: rgba(255,255,255,0.03);
+      }
+      .contact-box p {
+        color: rgba(255,255,255,0.7);
+      }
+      @media (max-width: 900px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 42px;
+        }
+        nav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">Ordinary Magic</div>
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#works">Selected Works</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Photography Portfolio</div>
+          <h1>Ordinary Magic</h1>
+          <p class="lead">
+            A quiet portfolio for photographs, projects and long-term work.
+            Reduced in form, clear in rhythm, and centered on the image.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1400&q=80" alt="Featured photograph">
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="eyebrow">Projects</div>
+        <h2>Selected series and bodies of work</h2>
+        <p class="section-text">
+          Distinct projects can sit next to each other without losing the overall calm and coherence of the site.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Athina">
+            </div>
+            <div class="card-body">
+              <div class="meta">2016–2025</div>
+              <h3>Athina</h3>
+              <p>A long-term photographic approach to Athens — between daily life, public space, history and friction.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Vienna">
+            </div>
+            <div class="card-body">
+              <div class="meta">Selected Photographs</div>
+              <h3>Vienna</h3>
+              <p>Observations from the city: calm constellations, small disturbances and precisely placed moments.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="Across Projects">
+            </div>
+            <div class="card-body">
+              <div class="meta">Across Projects</div>
+              <h3>Ordinary Magic</h3>
+              <p>An open selection from different bodies of work, loosely connected by gaze, rhythm and atmosphere.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="works">
+        <div class="eyebrow">Selected Works</div>
+        <h2>A broader image selection</h2>
+        <p class="section-text">
+          A flexible grid for individual photographs that can rotate over time and connect different projects.
+        </p>
+      </section>
+
+      <section id="about" class="about">
+        <div class="eyebrow">About</div>
+        <h2>A clear structure for different bodies of work</h2>
+        <p class="section-text">
+          This website is deliberately minimal: strong typography, dark space, generous image areas and enough structure for projects, books and exhibitions.
+        </p>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="contact-box">
+          <div class="eyebrow">Contact</div>
+          <h2>For exhibitions, books, prints or commissions.</h2>
+          <p>yourname@email.com</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+3. Speichern
+
+Ganz unten auf:
+
+Commit new file
+
+Danach gehst du wieder zu Vercel. Wenn du dort bist, sage einfach: bei Vercel.
+
+Wo eintragen Commit d651573
+ordinarymagic-photo
+ordinarymagic-photo
+authored
+1 minute ago
+·
+·
+Verified
+Create index.html
+main
+1 parent 
+627dab5
+ commit 
+d651573
+File tree
+Filter files…
+index.html
+1 file changed
++1
+-0
+lines changed
+Search within code
+ 
+‎index.html‎
++1
+Lines changed: 1 addition & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1 @@
+0 commit comments
+Comments
+0
+ (0)
+Comment
+You're not receiving notifications from this thread.
+
+Sehr gut — du hast index.html erstellt, aber:
+
+👉 aktuell steht nur 1 Zeile drin
+→ deshalb funktioniert die Website noch nicht
+
+🔧 Jetzt fixen wir das sauber
+👉 1. Datei wieder öffnen
+
+Klicke auf:
+👉 index.html
+
+👉 2. Bearbeiten
+
+Oben rechts:
+👉 ✏️ Edit (Stift-Symbol)
+
+👉 3. Inhalt ersetzen
+
+Du siehst aktuell vermutlich nur eine leere oder sehr kurze Zeile.
+
+👉 ALLES löschen
+
+👉 Dann den kompletten HTML-Code einfügen
+(den ich dir vorher geschickt habe – falls du ihn nicht mehr hast, sag kurz Bescheid, ich schicke ihn nochmal)
+
+👉 4. Ganz wichtig: speichern
+
+Runterscrollen:
+
+👉 Commit changes
+
+🚨 Wichtig
+
+Du brauchst:
+👉 eine komplette HTML-Seite
+nicht nur eine leere Datei
+
+🚀 Danach
+zurück zu Vercel
+Redeploy klicken
+🎯 Ziel
+
+Diesmal:
+
+kein Build mehr ❌
+einfach nur Seite laden ✅
+
+👉 Schreib mir danach:
+
+„jetzt drin“
+
+oder wenn du unsicher bist → Screenshot / Text
+
+Wir bringen das jetzt fertig 💥
